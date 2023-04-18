@@ -1,0 +1,110 @@
+a {
+    text-decoration: none;
+    color: rgb(135, 165, 245);
+}
+
+a:hover {
+    color: rgb(247, 108, 224);
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 10px 0 10px;
+}
+
+.nav-group {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.active {
+    color: rgb(247, 108, 224);
+}
+
+/* main */
+
+main {
+    margin-top: 110px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* introduction */
+
+#home {
+    height: 130vh;
+    padding: 10px;
+    border-bottom-left-radius: 50px;
+    background-image: url('../images/intro-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.intro {
+    width: 500px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+/* services */
+
+#services {
+    height: 70vh;
+    padding: 10px;
+    background-color: aliceblue;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+/* about */
+
+#about {
+    height: 70vh;
+    padding: 10px;
+    background-color: aliceblue;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+/* contact */
+
+#contact {
+    height: 70vh;
+    padding: 10px;
+    background-color: aliceblue;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+/* login */
+#login {
+    height: 70vh;
+    padding: 100px;
+    background-color: aliceblue;
+    border-top-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-form {
+    width: 500px;
+}
