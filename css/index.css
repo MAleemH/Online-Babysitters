@@ -66,11 +66,64 @@ main {
 /* services */
 
 #services {
-    height: 70vh;
+    height: 130vh;
     padding: 10px;
-    background-color: aliceblue;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
+    background-image: url('../images/services-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+.card {
+    height: 300px;
+    padding: 0;
+    margin: 0;
+}
+
+.card-body {
+    overflow-y: auto;
+}
+
+.MultiCarousel {
+    overflow: hidden;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    display: flex;
+    gap: 10px;
+}
+
+.MultiCarousel .MultiCarousel-inner .item > div {
+    padding: 10px;
+    margin: 0;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+    left: 0;
+}
+
+.MultiCarousel .rightLst {
+    right: 0;
+}
+    
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background:#ccc;
 }
 
 /* about */
