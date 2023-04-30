@@ -132,7 +132,6 @@ main {
 #about {
     height: 130vh;
     padding: 10px;
-    background-color: aliceblue;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
     background-image: url('../images/about-bg.png');
@@ -144,11 +143,21 @@ main {
 /* contact */
 
 #contact {
-    height: 70vh;
+    height: 130vh;
     padding: 10px;
-    background-color: aliceblue;
+    background-image: url('../images/contact-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-top-right-radius: 50px;
     border-bottom-left-radius: 50px;
+}
+
+.contact-info {
+    height: 500px;
+    border-radius: 10px;
+    padding-left: 100px;
+    background-color: #9da0b8;
 }
 
 /* login */
