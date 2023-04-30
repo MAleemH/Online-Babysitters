@@ -155,7 +155,10 @@ main {
 #login {
     height: 70vh;
     padding: 100px;
-    background-color: aliceblue;
+    background-image: url('../images/login-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-top-right-radius: 50px;
     display: flex;
     flex-direction: column;
