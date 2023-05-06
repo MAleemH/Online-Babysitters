@@ -1,58 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Online Babysitters</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<!-- head and header -->
+<?php 
+  
+  include './includes/head.php';
+  include './includes/header.php';
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css" />
-
-    <!-- Script for Services Carousel -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-    <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/2f09744991.js" crossorigin="anonymous"></script>
-  </head>
-
-  <body>
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar fixed-top navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          <img src="images/logo.png" alt="" width="100" height="100" />
-        </a>
-        <ul class="nav-group">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a href="#login">Login</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+?>
+    
     <main data-bs-spy="scroll">
       <!-- Introduction -->
       <section id="home">
@@ -292,22 +245,5 @@
         </form>
       </section>
     </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Custom JavaScript -->
-    <script src="javascript/index.js"></script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+<!-- footer -->
+<?php include './includes/footer.php'; ?>
