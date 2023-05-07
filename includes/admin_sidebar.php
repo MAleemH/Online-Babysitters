@@ -1,7 +1,6 @@
 <div class="sidebar">
     <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Online Babysitters</span>
+      <img src="../images/logo.png" alt="" width="150" height="150" />
     </div>
       <ul class="nav-links">
         <li>

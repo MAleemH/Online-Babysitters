@@ -18,7 +18,7 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.css?v=<?php echo time(); ?>" />
 
     <!-- Script for Services Carousel -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
