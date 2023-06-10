@@ -4,49 +4,49 @@
   </div>
   <ul class="nav-links">
     <li>
-      <a href="#" class="active">
+      <a href="index.php" class="active">
         <i class='bx bx-grid-alt'></i>
         <span class="links_name">Dashboard</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="services.php">
         <i class='bx bx-box'></i>
         <span class="links_name">Services</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="enrollments.php">
         <i class='bx bx-list-ul'></i>
         <span class="links_name">Enrollments</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="babysitters.php">
         <i class='bx bx-user'></i>
         <span class="links_name">Babysitters</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="messages.php">
         <i class='bx bx-message'></i>
         <span class="links_name">Messages</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="about_us.php">
         <i class='bx bx-list-ul'></i>
         <span class="links_name">About Us</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="contact_us.php">
         <i class='bx bx-list-ul'></i>
         <span class="links_name">Contact Us</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="setting.php">
         <i class='bx bx-cog'></i>
         <span class="links_name">Setting</span>
       </a>
