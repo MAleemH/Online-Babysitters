@@ -12,37 +12,19 @@
     <li>
       <a href="#">
         <i class='bx bx-box'></i>
-        <span class="links_name">Product</span>
+        <span class="links_name">Services</span>
       </a>
     </li>
     <li>
       <a href="#">
         <i class='bx bx-list-ul'></i>
-        <span class="links_name">Order list</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-pie-chart-alt-2'></i>
-        <span class="links_name">Analytics</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-coin-stack'></i>
-        <span class="links_name">Stock</span>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bx bx-book-alt'></i>
-        <span class="links_name">Total order</span>
+        <span class="links_name">Enrollments</span>
       </a>
     </li>
     <li>
       <a href="#">
         <i class='bx bx-user'></i>
-        <span class="links_name">Team</span>
+        <span class="links_name">Babysitters</span>
       </a>
     </li>
     <li>
@@ -53,8 +35,14 @@
     </li>
     <li>
       <a href="#">
-        <i class='bx bx-heart'></i>
-        <span class="links_name">Favrorites</span>
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">About Us</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">Contact Us</span>
       </a>
     </li>
     <li>
