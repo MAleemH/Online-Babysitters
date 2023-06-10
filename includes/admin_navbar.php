@@ -8,8 +8,7 @@
     <i class='bx bx-search'></i>
   </div>
   <div class="profile-details">
-    <img src="images/profile.jpg" alt="">
-    <span class="admin_name">Prem Shahi</span>
-    <i class='bx bx-chevron-down'></i>
+    <img src="../images/user-icon.jpg" alt="Admin-Image">
+    <span class="admin_name">Muhammad Naseem</span>
   </div>
 </nav>
