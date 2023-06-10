@@ -15,47 +15,45 @@ include '../includes/admin_sidebar.php';
     <div class="overview-boxes">
       <div class="box">
         <div class="right-side">
-          <div class="box-topic">Total Order</div>
+          <div class="box-topic">Total Babysitters</div>
           <div class="number">40,876</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Up from yesterday</span>
-          </div>
         </div>
-        <i class='bx bx-cart-alt cart'></i>
+        <i class='bx bx-group cart'></i>
       </div>
       <div class="box">
         <div class="right-side">
-          <div class="box-topic">Total Sales</div>
+          <div class="box-topic">Total Subscribers</div>
           <div class="number">38,876</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Up from yesterday</span>
-          </div>
         </div>
-        <i class='bx bxs-cart-add cart two'></i>
+        <i class='bx bxs-group cart two'></i>
       </div>
       <div class="box">
         <div class="right-side">
-          <div class="box-topic">Total Profit</div>
+          <div class="box-topic">Total Services</div>
           <div class="number">$12,876</div>
-          <div class="indicator">
-            <i class='bx bx-up-arrow-alt'></i>
-            <span class="text">Up from yesterday</span>
-          </div>
         </div>
-        <i class='bx bx-cart cart three'></i>
+        <i class='bx bx-category cart three'></i>
       </div>
       <div class="box">
         <div class="right-side">
-          <div class="box-topic">Total Return</div>
+          <div class="box-topic">Total New Enrollment</div>
           <div class="number">11,086</div>
-          <div class="indicator">
-            <i class='bx bx-down-arrow-alt down'></i>
-            <span class="text">Down From Today</span>
-          </div>
         </div>
-        <i class='bx bxs-cart-download cart four'></i>
+        <i class='bx bx-user-pin cart five'></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Total Accepted Enrollment</div>
+          <div class="number">11,086</div>
+        </div>
+        <i class='bx bx-user-plus cart two'></i>
+      </div>
+      <div class="box">
+        <div class="right-side">
+          <div class="box-topic">Total Rejected Enrollment</div>
+          <div class="number">11,086</div>
+        </div>
+        <i class='bx bx-user-minus cart four'></i>
       </div>
     </div>
 
