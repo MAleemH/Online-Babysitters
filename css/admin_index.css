@@ -29,6 +29,7 @@
 
 .sidebar .nav-links{
   margin-top: 10px;
+  padding: 0;
 }
 
 .sidebar .nav-links li{
@@ -268,6 +269,40 @@ nav .profile-details i{
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+}
+
+/* settings page */
+
+.add-user-btn {
+  background-color: #fff;
+  height: 70px;
+  width: 110px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #2BD47D;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.add-user-btn:hover {
+  background-color: #2BD47D;
+  color: #fff;
+}
+
+.form-heading {
+  color: #2BD47D;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Responsive Media Query */

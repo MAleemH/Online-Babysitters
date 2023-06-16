@@ -13,6 +13,10 @@ include '../includes/admin_sidebar.php';
 
     <div class="home-content">
 
+        <div class='overview-boxes'>
+            <a href="add_user.php" class='add-user-btn'>Add User</a>
+        </div>
+
         <div class="other-details">
             <h3>Profile</h3>
             <div>
