@@ -271,26 +271,13 @@ nav .profile-details i{
   border-radius: 10px;
 }
 
-/* settings page */
-
-.add-user-btn {
-  background-color: #fff;
-  height: 70px;
-  width: 110px;
-  border-radius: 5px;
+.overview {
+  margin: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #2BD47D;
-  font-weight: bold;
-  font-size: 20px;
+  gap: 7px;
 }
 
-.add-user-btn:hover {
-  background-color: #2BD47D;
-  color: #fff;
-}
+/* settings page */
 
 .form-heading {
   color: #2BD47D;

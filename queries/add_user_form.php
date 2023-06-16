@@ -21,7 +21,7 @@
         $result = mysqli_query($connection, $query);
 
         if ($result) {
-            header('Location: ../admin/setting.php');
+            header('Location: ../admin/add_user.php');
         } else {
             die("Query Connection Failed! " . mysqli_error($connection));
         }

@@ -13,8 +13,9 @@ include '../includes/admin_sidebar.php';
 
     <div class="home-content">
 
-        <div class='overview-boxes'>
-            <a href="add_user.php" class='add-user-btn'>Add User</a>
+        <div class='overview'>
+            <a href="add_user.php" class='btn btn-success'>Add User</a>
+            <a href="view_users.php" class='btn btn-warning'>View Users</a>
         </div>
 
         <div class="other-details">
@@ -54,7 +55,7 @@ include '../includes/admin_sidebar.php';
     </div>
 </section>
 
-<!-- navbar -->
+<!-- footer -->
 <?php
 include '../includes/admin_footer.php';
 ?>

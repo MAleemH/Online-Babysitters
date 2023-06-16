@@ -81,7 +81,7 @@ include '../includes/admin_sidebar.php';
   </div>
 </section>
 
-<!-- navbar -->
+<!-- footer -->
 <?php
 include '../includes/admin_footer.php';
 ?>
