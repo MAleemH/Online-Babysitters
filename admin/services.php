@@ -59,7 +59,7 @@ include '../includes/admin_sidebar.php';
                                 <td>
                                     <a href="edit_service.php?edit=<?php echo $service_id; ?>" class="btn btn-warning">Edit</a>
                                 </td>
-                                <td><a onClick="javascript: return confirm('Do you want to delete this user?');" href="../queries/delete_service_btn.php?delete=<?php echo $service_id; ?>" class="btn btn-danger">Delete</a></td>
+                                <td><a onClick="javascript: return confirm('Do you want to delete this service?');" href="../queries/delete_service_btn.php?delete=<?php echo $service_id; ?>" class="btn btn-danger">Delete</a></td>
                             </tr>
                             <?php
 
