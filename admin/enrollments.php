@@ -20,7 +20,15 @@ include '../includes/admin_sidebar.php';
         <div class="other-details">
             <h3>Enrollments</h3>
             <div>
-            <table class="table">
+                <form method="GET" action="">
+                    <div class="input-group mb-3">
+                        <input type="text" name="search_name" class="form-control" placeholder="Search By Name" aria-describedby="button-addon2">
+                        <input type="datetime-local" name="start_date" class="form-control" id='input_datetime' aria-describedby="button-addon2">
+                        <input type="datetime-local" name="end_date" class="form-control" aria-describedby="button-addon2">
+                        <button class="btn btn-primary" type="submit" id="button-addon2">Search</button>
+                    </div>
+                </form>
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -30,6 +38,7 @@ include '../includes/admin_sidebar.php';
                             <th scope="col">Contact</th>
                             <th scope="col">Emergency Contact</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Created At</th>
                             <th scope="col">Edit</th>
                             <th scope="col">Delete</th>
                         </tr>
@@ -37,7 +46,29 @@ include '../includes/admin_sidebar.php';
                     <tbody>
                         <?php
 
-                        $query = "SELECT * FROM enrollments";
+                        if (isset($_GET['search_name']) || (isset($_GET['start_date']) && isset($_GET['end_date']))) {
+                            
+                            $search_name = $_GET['search_name'];
+                            $start_date = $_GET['start_date'];
+                            $end_date = $_GET['end_date'];
+
+                            $query = "SELECT * FROM enrollments WHERE 1=1";
+
+                            if (!empty($search_name)) {
+
+                                $query .= " AND name LIKE '%$search_name%'";
+
+                            } elseif (!empty($start_date) && !empty($end_date)) {
+
+                                $query .= " AND created_at >= '$start_date' AND created_at <= '$end_date'";
+
+                            } else {
+                                $query = "SELECT * FROM enrollments";
+                            }
+                        } else {
+                            $query = "SELECT * FROM enrollments";
+                        }
+
                         $query_conn = mysqli_query($connection, $query);
 
                         while ($result = mysqli_fetch_assoc($query_conn)) {
@@ -48,6 +79,7 @@ include '../includes/admin_sidebar.php';
                             $contact = $result['contact_number'];
                             $emergency_contact = $result['emergency_contact_number'];
                             $status = $result['status'];
+                            $created_at = $result['created_at'];
 
                             ?>
                             <tr>
@@ -70,6 +102,9 @@ include '../includes/admin_sidebar.php';
                                 </td>
                                 <td>
                                     <?php echo $status; ?>
+                                </td>
+                                <td>
+                                    <?php echo $created_at; ?>
                                 </td>
                                 <td>
                                     <a href="edit_enrollment.php?edit=<?php echo $enrollment_id; ?>" class="btn btn-warning">Edit</a>
