@@ -16,15 +16,18 @@ include '../includes/admin_sidebar.php';
         <div class='overview'>
             <a href="add_user.php" class='btn btn-success'>Add User</a>
             <a href="view_users.php" class='btn btn-warning'>View Users</a>
+            <a href="#" class='btn btn-info'>Update Profile</a>
         </div>
 
         <div class="other-details">
-            <div class='d-flex justify-content-around'>
-                <div>
-                    Image of logged in user here
+            <div class='row'>
+                <div class='col-4 text-center'>
+                    <img class="rounded" src='../images/IMG_2424.jpg' width="150" height="120" />
                 </div>
-                <div>
-                    Other data here
+                <div class='col-8'>
+                    <p><b>Name:</b> Muhammad Aleem</p>
+                    <p><b>Email:</b> aleemhashmi4321@gmail.com</p>
+                    <p><b>Password:</b> 12345</p>
                 </div>
             </div>
         </div>
