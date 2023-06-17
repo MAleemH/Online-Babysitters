@@ -13,38 +13,76 @@ include '../includes/admin_sidebar.php';
 
     <div class="home-content">
 
+        <div class='overview'>
+            <a href="add_babysitter.php" class='btn btn-success'>Add Babysitter</a>
+        </div>
+
         <div class="other-details">
             <h3>Babysitters</h3>
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium pariatur sit vel animi nulla in,
-                blanditiis
-                placeat repellat tempore voluptas reprehenderit laborum sint minus velit facilis natus sequi vero
-                perferendis?
-                Repellat reprehenderit quibusdam voluptate non recusandae hic reiciendis blanditiis consequatur sit
-                dolorum est
-                fugiat, dolores magnam doloremque illum, repudiandae architecto saepe! Consequuntur, ipsam. Ut animi,
-                ipsa
-                repellat nisi obcaecati totam!
-                Deleniti excepturi commodi inventore sapiente cupiditate alias autem amet illum incidunt harum tempore
-                quam,
-                assumenda quibusdam culpa ullam cum numquam esse recusandae sed laborum nulla, repellat vitae qui. In,
-                velit!
-                Illum excepturi tempora esse debitis ea veniam quibusdam distinctio impedit ratione sed tempore
-                blanditiis quae
-                hic magnam, aperiam quisquam, nesciunt a modi eligendi, voluptate voluptates pariatur rem. Debitis, qui
-                dicta.
-                Distinctio sit illo dolorem neque rem modi unde optio doloribus aperiam, itaque iste officia maxime eos
-                inventore? Illo, earum repellat eligendi, nemo numquam similique dolorem non quaerat nihil, labore
-                rerum!
-                Veritatis repellat aspernatur sit magni, soluta odio. Natus voluptatibus eos, aliquam nisi cumque
-                voluptas qui
-                voluptatum voluptates. Atque earum inventore debitis ipsa, nulla esse, eos dignissimos placeat
-                doloremque cum
-                officia.
-                Quia cum numquam consectetur sunt! Delectus quibusdam, exercitationem doloremque libero voluptatem odit?
-                Perferendis natus id excepturi asperiores, veritatis officia, esse accusamus doloremque reprehenderit
-                voluptate
-                sunt alias praesentium aut labore cupiditate.
+            <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Contact</th>
+                            <th scope="col">Emergency Contact</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+
+                        $query = "SELECT * FROM babysitters";
+                        $query_conn = mysqli_query($connection, $query);
+
+                        while ($result = mysqli_fetch_assoc($query_conn)) {
+                            $babysitter_id = $result['babysitter_id'];
+                            $name = $result['name'];
+                            $image = $result['photo'];
+                            $address = $result['address'];
+                            $contact = $result['contact_number'];
+                            $emergency_contact = $result['emergency_contact_number'];
+                            $type = $result['type'];
+
+                            ?>
+                            <tr>
+                                <th scope="row">
+                                    <?php echo $babysitter_id; ?>
+                                </th>
+                                <td>
+                                    <?php echo $name; ?>
+                                </td>
+                                <td><img class="rounded" src="../images/<?php echo $image; ?>" width="50" height="50">
+                                </td>
+                                <td>
+                                    <?php echo $address; ?>
+                                </td>
+                                <td>
+                                    <?php echo $contact; ?>
+                                </td>
+                                <td>
+                                    <?php echo $emergency_contact; ?>
+                                </td>
+                                <td>
+                                    <?php echo $type; ?>
+                                </td>
+                                <td>
+                                    <a href="edit_babysitter.php?edit=<?php echo $babysitter_id; ?>" class="btn btn-warning">Edit</a>
+                                </td>
+                                <td><a onClick="javascript: return confirm('Do you want to delete this babysitter?');" href="../queries/delete_babysitter_btn.php?delete=<?php echo $babysitter_id; ?>" class="btn btn-danger">Delete</a></td>
+                            </tr>
+                            <?php
+
+                        }
+
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

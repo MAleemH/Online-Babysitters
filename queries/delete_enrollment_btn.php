@@ -10,7 +10,7 @@ if (isset($_GET['delete'])) {
     if ($delete_conn) {
         header("Location: ../admin/enrollments.php");
     } else {
-        die("User is not deleted! " . mysqli_error($connection));
+        die("Enrollment is not deleted! " . mysqli_error($connection));
     }
 
 }
