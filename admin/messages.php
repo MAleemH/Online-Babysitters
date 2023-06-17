@@ -14,7 +14,6 @@ include '../includes/admin_sidebar.php';
     <div class="home-content">
 
         <div class="other-details">
-            <h3>Messages</h3>
             <div>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium pariatur sit vel animi nulla in,
                 blanditiis

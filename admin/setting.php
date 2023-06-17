@@ -19,7 +19,6 @@ include '../includes/admin_sidebar.php';
         </div>
 
         <div class="other-details">
-            <h3>Profile</h3>
             <div class='d-flex justify-content-around'>
                 <div>
                     Image of logged in user here

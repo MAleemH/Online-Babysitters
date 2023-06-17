@@ -18,7 +18,6 @@ include '../includes/admin_sidebar.php';
         </div>
 
         <div class="other-details">
-            <h3>Enrollments</h3>
             <div>
                 <form method="GET" action="">
                     <div class="input-group mb-3">

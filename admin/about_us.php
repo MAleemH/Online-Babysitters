@@ -32,7 +32,6 @@ include '../includes/admin_sidebar.php';
         </div>
 
         <div class="other-details">
-            <h3>About Us</h3>
             <div>
                 <div class="row">
                     <?php

@@ -18,9 +18,8 @@ include '../includes/admin_sidebar.php';
         </div>
 
         <div class="other-details">
-            <h3>Services</h3>
             <div>
-            <table class="table">
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">#</th>

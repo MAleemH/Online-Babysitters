@@ -31,7 +31,6 @@ include '../includes/admin_sidebar.php';
         </div>
 
         <div class="other-details">
-            <h3>Contact Us</h3>
             <div>
                 <table class="table">
                     <thead>
