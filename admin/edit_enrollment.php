@@ -84,10 +84,16 @@ include '../includes/admin_sidebar.php';
                                 if ($status=='Pending') {
                                     echo "<option value='Accepted'>Accepted</option>";
                                     echo "<option value='Rejected'>Rejected</option>";
+                                    echo "<option value='Hold'>Hold</option>";
                                 } elseif ($status=='Accepted') {
                                     echo "<option value='Rejected'>Rejected</option>";
+                                    echo "<option value='Hold'>Hold</option>";
+                                } elseif ($status=='Rejected') {
+                                    echo "<option value='Accepted'>Accepted</option>";
+                                    echo "<option value='Hold'>Hold</option>";
                                 } else {
                                     echo "<option value='Accepted'>Accepted</option>";
+                                    echo "<option value='Rejected'>Rejected</option>";
                                 }
                             
                             ?>
