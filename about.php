@@ -12,7 +12,7 @@ include './includes/header.php';
     <!-- about us title -->
     <div class="row m-3">
       <div class="col-12 text-uppercase text-center">
-        <h2>About Us</h2>
+        <h2 class="text-black">About Us</h2>
       </div>
     </div>
     <div class="intro">

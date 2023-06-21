@@ -11,7 +11,7 @@ include './includes/header.php';
     <!-- contact us title -->
     <div class="row m-3">
       <div class="col-12 text-uppercase text-center">
-        <h2>Contact Us</h2>
+        <h2 class="text-black">Contact Us</h2>
       </div>
     </div>
     <div class="row mt-5">

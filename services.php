@@ -13,7 +13,7 @@ include './includes/header.php';
       <!-- services title -->
       <div class="row m-3">
         <div class="col-12 text-uppercase text-center text-white">
-          <h2>Our Services</h2>
+          <h2 class="text-black">Our Services</h2>
         </div>
       </div>
       <!-- daycare services -->
