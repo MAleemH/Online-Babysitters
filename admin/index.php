@@ -1,8 +1,10 @@
-<!-- head and sidebar -->
+<!-- head, sidebar and dashboard functions -->
 <?php
 
 include '../includes/admin_head.php';
 include '../includes/admin_sidebar.php';
+require_once '../queries/dashboard_functions.php';
+
 ?>
 
 <section class="home-section">
@@ -16,42 +18,42 @@ include '../includes/admin_sidebar.php';
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total Babysitters</div>
-          <div class="number">40,876</div>
+          <div class="number"><?php echo getTotalBabysitters($connection); ?></div>
         </div>
         <i class='bx bx-group cart'></i>
       </div>
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total Subscribers</div>
-          <div class="number">38,876</div>
+          <div class="number">38</div>
         </div>
         <i class='bx bxs-group cart two'></i>
       </div>
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total Services</div>
-          <div class="number">$12,876</div>
+          <div class="number"><?php echo getTotalServices($connection); ?></div>
         </div>
         <i class='bx bx-category cart three'></i>
       </div>
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total New Enrollment</div>
-          <div class="number">11,086</div>
+          <div class="number"><?php echo getTotalNewEnrollments($connection, 'Pending'); ?></div>
         </div>
         <i class='bx bx-user-pin cart five'></i>
       </div>
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total Accepted Enrollment</div>
-          <div class="number">11,086</div>
+          <div class="number"><?php echo getTotalAcceptedEnrollments($connection, 'Accepted'); ?></div>
         </div>
         <i class='bx bx-user-plus cart two'></i>
       </div>
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total Rejected Enrollment</div>
-          <div class="number">11,086</div>
+          <div class="number"><?php echo getTotalRejectedEnrollments($connection, 'Rejected'); ?></div>
         </div>
         <i class='bx bx-user-minus cart four'></i>
       </div>
@@ -81,7 +83,7 @@ include '../includes/admin_sidebar.php';
   </div>
 </section>
 
-<!-- navbar -->
+<!-- footer -->
 <?php
 include '../includes/admin_footer.php';
 ?>

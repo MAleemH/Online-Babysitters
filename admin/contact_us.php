@@ -12,45 +12,81 @@ include '../includes/admin_sidebar.php';
     ?>
 
     <div class="home-content">
+        <div class='overview'>
+            <?php
+                $query = "SELECT COUNT(*) AS total_rows FROM contact";
+                $result = mysqli_query($connection, $query);
+                if ($result) {
+                    $row = mysqli_fetch_assoc($result);
+                    $rowCount = $row['total_rows'];
+                    if ($rowCount >= 1) {
+                        echo "<a href='add_contact.php' onClick='return false;' class='btn btn-secondary disabled'>Add New</a>";
+                    } else {
+                        echo "<a href='add_contact.php' class='btn btn-success'>Add New</a>";
+                    }
+                } else {
+                    echo "Error: " . mysqli_error($connection);
+                }
+            ?>
+        </div>
 
         <div class="other-details">
-            <h3>Contact Us</h3>
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium pariatur sit vel animi nulla in,
-                blanditiis
-                placeat repellat tempore voluptas reprehenderit laborum sint minus velit facilis natus sequi vero
-                perferendis?
-                Repellat reprehenderit quibusdam voluptate non recusandae hic reiciendis blanditiis consequatur sit
-                dolorum est
-                fugiat, dolores magnam doloremque illum, repudiandae architecto saepe! Consequuntur, ipsam. Ut animi,
-                ipsa
-                repellat nisi obcaecati totam!
-                Deleniti excepturi commodi inventore sapiente cupiditate alias autem amet illum incidunt harum tempore
-                quam,
-                assumenda quibusdam culpa ullam cum numquam esse recusandae sed laborum nulla, repellat vitae qui. In,
-                velit!
-                Illum excepturi tempora esse debitis ea veniam quibusdam distinctio impedit ratione sed tempore
-                blanditiis quae
-                hic magnam, aperiam quisquam, nesciunt a modi eligendi, voluptate voluptates pariatur rem. Debitis, qui
-                dicta.
-                Distinctio sit illo dolorem neque rem modi unde optio doloribus aperiam, itaque iste officia maxime eos
-                inventore? Illo, earum repellat eligendi, nemo numquam similique dolorem non quaerat nihil, labore
-                rerum!
-                Veritatis repellat aspernatur sit magni, soluta odio. Natus voluptatibus eos, aliquam nisi cumque
-                voluptas qui
-                voluptatum voluptates. Atque earum inventore debitis ipsa, nulla esse, eos dignissimos placeat
-                doloremque cum
-                officia.
-                Quia cum numquam consectetur sunt! Delectus quibusdam, exercitationem doloremque libero voluptatem odit?
-                Perferendis natus id excepturi asperiores, veritatis officia, esse accusamus doloremque reprehenderit
-                voluptate
-                sunt alias praesentium aut labore cupiditate.
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Contact Number</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+
+                        $query = "SELECT * FROM contact";
+                        $query_conn = mysqli_query($connection, $query);
+
+                        while ($result = mysqli_fetch_assoc($query_conn)) {
+                            $contact_id = $result['id'];
+                            $email = $result['email'];
+                            $contact_number = $result['contact_number'];
+                            $address = $result['address'];
+
+                            ?>
+                            <tr>
+                                <th scope="row">
+                                    <?php echo $contact_id; ?>
+                                </th>
+                                <td>
+                                    <?php echo $email; ?>
+                                </td>
+                                <td>
+                                    <?php echo $contact_number; ?>
+                                </td>
+                                <td>
+                                    <?php echo $address; ?>
+                                </td>
+                                <td>
+                                    <a href="edit_contact.php?edit=<?php echo $contact_id; ?>" class="btn btn-warning">Edit</a>
+                                </td>
+                                <td><a onClick="javascript: return confirm('Do you want to delete this details?');" href="../queries/delete_contact_btn.php?delete=<?php echo $contact_id; ?>" class="btn btn-danger">Delete</a></td>
+                            </tr>
+                            <?php
+
+                        }
+
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 </section>
 
-<!-- navbar -->
+<!-- footer -->
 <?php
 include '../includes/admin_footer.php';
 ?>

@@ -13,8 +13,8 @@ include '../includes/admin_sidebar.php';
 
     <div class="home-content">
 
-        <div class='overview'>
-            <a href="add_service.php" class='btn btn-success'>Add Service</a>
+        <div class='overview-boxes'>
+            <p class='form-heading'>Users List</p>
         </div>
 
         <div class="other-details">
@@ -23,42 +23,48 @@ include '../includes/admin_sidebar.php';
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
+                            <th scope="col">Full Name</th>
                             <th scope="col">Image</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Edit</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Role</th>
                             <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
 
-                        $query = "SELECT * FROM services";
+                        $query = "SELECT * FROM users";
                         $query_conn = mysqli_query($connection, $query);
 
                         while ($result = mysqli_fetch_assoc($query_conn)) {
-                            $service_id = $result['service_id'];
-                            $service_name = $result['name'];
-                            $service_image = $result['photo'];
-                            $service_description = $result['description'];
+                            $user_id = $result['user_id'];
+                            $user_name = $result['user_name'];
+                            $user_image = $result['user_image'];
+                            $user_email = $result['user_email'];
+                            $user_password = $result['user_password'];
+                            $user_role = $result['user_role'];
 
                             ?>
                             <tr>
                                 <th scope="row">
-                                    <?php echo $service_id; ?>
+                                    <?php echo $user_id; ?>
                                 </th>
                                 <td>
-                                    <?php echo $service_name; ?>
+                                    <?php echo $user_name; ?>
                                 </td>
-                                <td><img class="rounded" src="../images/<?php echo $service_image; ?>" width="50" height="50">
-                                </td>
-                                <td>
-                                    <?php echo $service_description; ?>
+                                <td><img class="rounded" src="../images/<?php echo $user_image; ?>" width="50" height="50">
                                 </td>
                                 <td>
-                                    <a href="edit_service.php?edit=<?php echo $service_id; ?>" class="btn btn-warning">Edit</a>
+                                    <?php echo $user_email; ?>
                                 </td>
-                                <td><a onClick="javascript: return confirm('Do you want to delete this service?');" href="../queries/delete_service_btn.php?delete=<?php echo $service_id; ?>" class="btn btn-danger">Delete</a></td>
+                                <td>
+                                    <?php echo $user_password; ?>
+                                </td>
+                                <td>
+                                    <?php echo $user_role; ?>
+                                </td>
+                                <td><a onClick="javascript: return confirm('Do you want to delete this user?');" href="../queries/delete_user_btn.php?delete=<?php echo $user_id; ?>" class="btn btn-danger">Delete</a></td>
                             </tr>
                             <?php
 

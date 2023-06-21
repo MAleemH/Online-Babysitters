@@ -13,44 +13,66 @@ include '../includes/admin_sidebar.php';
 
     <div class="home-content">
 
+        <div class='overview'>
+            <?php
+                $query = "SELECT COUNT(*) AS total_rows FROM about";
+                $result = mysqli_query($connection, $query);
+                if ($result) {
+                    $row = mysqli_fetch_assoc($result);
+                    $rowCount = $row['total_rows'];
+                    if ($rowCount >= 2) {
+                        echo "<a href='add_about.php' onClick='return false;' class='btn btn-secondary disabled'>Add New</a>";
+                    } else {
+                        echo "<a href='add_about.php' class='btn btn-success'>Add New</a>";
+                    }
+                } else {
+                    echo "Error: " . mysqli_error($connection);
+                }
+            ?>
+        </div>
+
         <div class="other-details">
-            <h3>About Us</h3>
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium pariatur sit vel animi nulla in,
-                blanditiis
-                placeat repellat tempore voluptas reprehenderit laborum sint minus velit facilis natus sequi vero
-                perferendis?
-                Repellat reprehenderit quibusdam voluptate non recusandae hic reiciendis blanditiis consequatur sit
-                dolorum est
-                fugiat, dolores magnam doloremque illum, repudiandae architecto saepe! Consequuntur, ipsam. Ut animi,
-                ipsa
-                repellat nisi obcaecati totam!
-                Deleniti excepturi commodi inventore sapiente cupiditate alias autem amet illum incidunt harum tempore
-                quam,
-                assumenda quibusdam culpa ullam cum numquam esse recusandae sed laborum nulla, repellat vitae qui. In,
-                velit!
-                Illum excepturi tempora esse debitis ea veniam quibusdam distinctio impedit ratione sed tempore
-                blanditiis quae
-                hic magnam, aperiam quisquam, nesciunt a modi eligendi, voluptate voluptates pariatur rem. Debitis, qui
-                dicta.
-                Distinctio sit illo dolorem neque rem modi unde optio doloribus aperiam, itaque iste officia maxime eos
-                inventore? Illo, earum repellat eligendi, nemo numquam similique dolorem non quaerat nihil, labore
-                rerum!
-                Veritatis repellat aspernatur sit magni, soluta odio. Natus voluptatibus eos, aliquam nisi cumque
-                voluptas qui
-                voluptatum voluptates. Atque earum inventore debitis ipsa, nulla esse, eos dignissimos placeat
-                doloremque cum
-                officia.
-                Quia cum numquam consectetur sunt! Delectus quibusdam, exercitationem doloremque libero voluptatem odit?
-                Perferendis natus id excepturi asperiores, veritatis officia, esse accusamus doloremque reprehenderit
-                voluptate
-                sunt alias praesentium aut labore cupiditate.
+                <div class="row">
+                    <?php
+
+                    $query = "SELECT * FROM about";
+                    $query_conn = mysqli_query($connection, $query);
+
+                    while ($result = mysqli_fetch_assoc($query_conn)) {
+                        $about_id = $result['id'];
+                        $title = $result['title'];
+                        $description = $result['description'];
+
+                        ?>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <?php echo $title; ?>
+                                    </h5>
+                                    <p class="card-text">
+                                        <?php echo $description; ?>
+                                    </p>
+                                    <a href="edit_about.php?edit=<?php echo $about_id; ?>" class="btn btn-warning">Edit</a>
+                                    <a onClick="javascript: return confirm('Do you want to delete this details?');"
+                                        href="../queries/delete_about_btn.php?delete=<?php echo $about_id; ?>"
+                                        class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+
+                    }
+
+                    ?>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- navbar -->
+<!-- footer -->
 <?php
 include '../includes/admin_footer.php';
 ?>
