@@ -1,43 +1,41 @@
 <!-- footer -->
-<div class="container">
-  <footer class="py-5">
+<div class="container-fluid m-0 bg-light">
+  <footer class="pt-5">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Services</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Babysitting Services</a></li>
+          <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Childcare Options</a></li>
+          <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Types of Babysitters</a></li>
+          <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Specialized Care</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>About Us</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted">Our Story</a></li>
+          <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted">Mission and Values</a></li>
+          <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted">Meet the Team</a></li>
+          <li class="nav-item mb-2"><a href="about.php" class="nav-link p-0 text-muted">Why Choose Us</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
+        <h5>Contact Us</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="contact.php" class="nav-link p-0 text-muted">Get in Touch</a></li>
+          <li class="nav-item mb-2"><a href="contact.php" class="nav-link p-0 text-muted">Contact Information</a></li>
+          <li class="nav-item mb-2"><a href="contact.php" class="nav-link p-0 text-muted">Request a Babysitter</a></li>
+          <li class="nav-item mb-2"><a href="contact.php" class="nav-link p-0 text-muted">Customer Support</a></li>
         </ul>
       </div>
 
       <div class="col-md-5 offset-md-1 mb-3">
         <form>
-          <h5>Subscribe to our newsletter</h5>
+          <h5>Subscribe to our website</h5>
           <p>Monthly digest of what's new and exciting from us.</p>
           <div class="d-flex flex-column flex-sm-row w-100 gap-2">
             <label for="newsletter1" class="visually-hidden">Email address</label>
@@ -48,8 +46,8 @@
       </div>
     </div>
 
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>&copy; {{< year >}} Company, Inc. All rights reserved.</p>
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 border-top">
+      <p>&copy; 2023 Company, Inc. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
