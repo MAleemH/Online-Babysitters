@@ -1,4 +1,3 @@
-<!-- footer -->
 <div class="container-fluid m-0 bg-light">
   <footer class="pt-5">
     <div class="row">
@@ -7,7 +6,6 @@
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Babysitting Services</a></li>
           <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Childcare Options</a></li>
-          <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Pricing</a></li>
           <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Types of Babysitters</a></li>
           <li class="nav-item mb-2"><a href="services.php" class="nav-link p-0 text-muted">Specialized Care</a></li>
         </ul>
