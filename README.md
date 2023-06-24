@@ -194,8 +194,7 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Forms**
-- [ ] **Admin Panel**
+- [ ] **More Admin Features**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
