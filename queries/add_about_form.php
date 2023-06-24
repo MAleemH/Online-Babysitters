@@ -6,6 +6,8 @@
         $title = $_POST['title'];
         $description = $_POST['description'];
 
+        $description = mysqli_real_escape_string($connection, $description);
+
         $query = "INSERT INTO about (title, description) VALUES ('$title', '$description')";
 
         if (!$query) {

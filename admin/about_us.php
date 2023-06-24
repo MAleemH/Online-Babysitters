@@ -20,7 +20,7 @@ include '../includes/admin_sidebar.php';
                 if ($result) {
                     $row = mysqli_fetch_assoc($result);
                     $rowCount = $row['total_rows'];
-                    if ($rowCount >= 2) {
+                    if ($rowCount >= 4) {
                         echo "<a href='add_about.php' onClick='return false;' class='btn btn-secondary disabled'>Add New</a>";
                     } else {
                         echo "<a href='add_about.php' class='btn btn-success'>Add New</a>";

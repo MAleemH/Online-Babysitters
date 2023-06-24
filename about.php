@@ -11,21 +11,35 @@ include './includes/header.php';
   <section id="about">
     <!-- about us title -->
     <div class="row m-3">
-      <div class="col-12 text-uppercase text-center">
-        <h2 class="text-black">About Us</h2>
+      <div class="col-12 text-uppercase text-center text-white">
+        <h2>About Us</h2>
       </div>
     </div>
-    <div class="intro">
-      <p>
-        Welcome to our online babysitters website, where we provide safe and reliable childcare services for families
-        across the world. Our website was created with the vision of offering busy parents an efficient and trustworthy
-        way to find qualified babysitters for their children. We understand the challenges of balancing work, family,
-        and personal commitments, and we believe that our platform can help alleviate some of that stress by providing
-        accessible and dependable childcare solutions.
+    <!-- about details -->
+    <div class="row g-0">
+      <?php
+      $query = "SELECT * FROM about";
+      $query_conn = mysqli_query($connection, $query);
 
-        We strive to provide exceptional customer service and support to our clients, which is why we have a dedicated
-        team available 24/7 to answer any questions or concerns you may have.
-      </p>
+      while ($result = mysqli_fetch_assoc($query_conn)) {
+        $about_id = $result['id'];
+        $title = $result['title'];
+        $description = $result['description'];
+
+        ?>
+
+        <div class='col-12 mb-3'>
+          <h4 class="text-white w-75"><?php echo $title; ?></h4>
+          <p class="text-white w-75">
+            <?php echo $description; ?>
+          </p>
+        </div>
+
+        <?php
+
+      }
+
+      ?>
     </div>
   </section>
 </main>

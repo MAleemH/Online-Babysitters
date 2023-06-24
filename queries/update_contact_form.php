@@ -7,6 +7,8 @@
         $contact_number = $_POST['contact_number'];
         $address = $_POST['address'];
 
+        $address = mysqli_real_escape_string($connection, $address);
+
         $query = "UPDATE contact SET email='$email', contact_number='$contact_number', address='$address' WHERE id='$contact_id'";
 
         if (!$query) {

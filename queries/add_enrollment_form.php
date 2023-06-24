@@ -14,6 +14,8 @@
 
         move_uploaded_file($image_tmp, "../images/$image");
 
+        $address = mysqli_real_escape_string($connection, $address);
+
         $query = "INSERT INTO enrollments (name, photo, address, contact_number, emergency_contact_number, status) VALUES ('$name', '$image', '$address', '$contact_number', '$emergency_contact_number', 'Pending')";
 
         if (!$query) {

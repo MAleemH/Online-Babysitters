@@ -10,6 +10,8 @@
 
         move_uploaded_file($image_tmp, "../images/$image");
 
+        $description = mysqli_real_escape_string($connection, $description);
+
         $query = "INSERT INTO services (name, photo, description) VALUES ('$name', '$image', '$description')";
 
         if (!$query) {

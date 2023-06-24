@@ -13,6 +13,8 @@
 
         move_uploaded_file($image_tmp, "../images/$image");
 
+        $address = mysqli_real_escape_string($connection, $address);
+
         $query = "INSERT INTO babysitters (name, photo, address, contact_number, emergency_contact_number, type) VALUES ('$name', '$image', '$address', '$contact_number', '$emergency_contact_number', '$type')";
 
         if (!$query) {
