@@ -19,6 +19,9 @@ include '../includes/admin_sidebar.php';
 
         <div class="other-details">
             <div>
+                <?php
+                    $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                ?>
                 <form action="../queries/add_enrollment_form.php" method="POST" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label class="form-label">Name</label>
@@ -49,6 +52,7 @@ include '../includes/admin_sidebar.php';
                             <option value="Pending">Pending</option>
                         </select>
                     </div>
+                    <input type="hidden" name="return_url" value="<?php echo $actual_link; ?>">
                     <div class="mb-3">
                         <div>
                             <button type="submit" name="add" class="btn btn-outline-success w-25">Add</button>
