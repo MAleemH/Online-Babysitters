@@ -62,7 +62,7 @@ include '../includes/admin_sidebar.php';
                     </div>
                     <div class="mb-3">
                         <div class="form-floating">
-                            <textarea class="form-control" name="address" id="floatingTextarea2"
+                            <textarea class="form-control" name="address" maxlength="100" id="floatingTextarea2"
                                 style="height: 100px"><?php echo $address; ?></textarea>
                             <label for="floatingTextarea2">Address</label>
                         </div>
