@@ -7,7 +7,7 @@
     if ($_SESSION['user_role'] !== 'Admin') {
       header("Location: ../login.php");
     }
-  } elseif (!isset($_SESSION['user_name'])) {
+  } elseif (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
   }
 
