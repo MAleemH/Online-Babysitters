@@ -51,7 +51,7 @@ include './includes/header.php';
         </div>
       </div>
       <!-- babysitters title -->
-      <div class="row m-3">
+      <div class="row m-4">
         <div class="col-12 text-uppercase text-center text-white">
           <h2 class="text-black">Our Babysitters</h2>
         </div>
@@ -75,14 +75,14 @@ include './includes/header.php';
                   $type = $result['type'];
 
             ?>
-            <div class="card mb-3 me-3 bCarousel-item" style="max-width: 500px; height: 265px;">
+            <div class="card mb-3 me-3 bCarousel-item" style="max-width: 500px; max-height: 250px;">
               <div class="row g-0 h-100">
-                <div class="col-md-4">
-                  <img src="images/<?php echo $image; ?>" class="img-fluid rounded-start h-100" alt="Babysitter-Image">
+                <div class="col-md-4" style="height: 100%; overflow: hidden;">
+                  <img src="images/<?php echo $image; ?>" class="img-fluid rounded-start h-100" alt="Babysitter-Image" style="height: 100%; object-fit: cover;">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h4 class="card-title"><?php echo $name; ?></h4>
+                    <h5 class="card-title"><?php echo $name; ?></h5>
                     <p class="card-text"><small class="text-muted"><?php echo $type; ?> Babysitter</small></p>
                     <div class='d-flex mb-3'>
                       <p class="card-text m-0"><b>Contact:</b> <?php echo $contact; ?></p>
@@ -101,6 +101,10 @@ include './includes/header.php';
           <button class="carousel-button next-btn" type="button">&gt;</button>
         </div>
       </div>
+    </div>
+    <!-- child enrollment button -->
+    <div class='w-100 text-center mt-4'>
+      <a class="btn btn-success w-25" href="child_enrollment.php">Enroll Your Child</a>
     </div>
   </section>
 </main>
