@@ -46,7 +46,7 @@
 
   </div>
   <div class="profile-details">
-    <img src="../images/user-icon.jpg" alt="Admin-Image">
-    <span class="admin_name">Muhammad Naseem</span>
+    <img src="../images/<?php echo $_SESSION['user_image']; ?>" alt="Admin-Image">
+    <span class="admin_name"><?php echo $_SESSION['user_name']; ?></span>
   </div>
 </nav>

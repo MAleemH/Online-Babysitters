@@ -21,7 +21,9 @@
 
         if ($count > 0) {
 
-            echo "Email already exists. Please use a different email.";
+            // echo "Email already exists. Please use a different email.";
+            $sub_error = "Email already exists. Please use a different email.";
+            header("Location: $return_url?sub_error=" . urlencode($sub_error));
 
         } else {
 

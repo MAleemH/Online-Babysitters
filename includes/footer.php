@@ -32,9 +32,17 @@
       </div>
 
       <div class="col-md-5 offset-md-1 mb-3">
+        <!-- Display error message if it exists -->
+        <?php if(isset($_GET['sub_error'])) { ?>
+            <div class="alert alert-danger" role="alert">
+                <?php echo $_GET['sub_error']; ?>
+            </div>
+        <?php } ?>
+        <!-- getting url -->
         <?php
           $actual_link = (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         ?>
+        <!-- subscription form -->
         <form action='queries/subscribe_form.php' method='POST'>
           <h5>Subscribe to our website</h5>
           <p>Monthly digest of what's new and exciting from us.</p>
