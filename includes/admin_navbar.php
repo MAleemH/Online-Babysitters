@@ -25,6 +25,10 @@
 
         echo "<span class='dashboard'>Messages</span>";
 
+      } elseif ($current_page == 'subscribers.php') {
+
+        echo "<span class='dashboard'>Subscribers</span>";
+
       } elseif ($current_page == 'about_us.php') {
 
         echo "<span class='dashboard'>About Us</span>";
