@@ -9,12 +9,12 @@ function getTotalBabysitters($connection) {
 }
 
 // Function to fetch the total number of subscribers
-// function getTotalSubscribers($connection) {
-//   $query = "SELECT COUNT(*) AS total_subscribers FROM subscribers";
-//   $result = mysqli_query($connection, $query);
-//   $row = mysqli_fetch_assoc($result);
-//   return $row['total_subscribers'];
-// }
+function getTotalSubscribers($connection) {
+  $query = "SELECT COUNT(*) AS total_subscribers FROM subscriptions";
+  $result = mysqli_query($connection, $query);
+  $row = mysqli_fetch_assoc($result);
+  return $row['total_subscribers'];
+}
 
 // Function to fetch the total number of services
 function getTotalServices($connection) {

@@ -64,7 +64,17 @@ include '../includes/admin_sidebar.php';
                                 <td>
                                     <?php echo $user_role; ?>
                                 </td>
-                                <td><a onClick="javascript: return confirm('Do you want to delete this user?');" href="../queries/delete_user_btn.php?delete=<?php echo $user_id; ?>" class="btn btn-danger">Delete</a></td>
+                                <?php
+                                if ($user_id == $_SESSION['user_id']) {
+                                    ?>
+                                    <td><a href="#" class="btn btn-secondary disabled">Cannot Delete</a></td>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <td><a onClick="javascript: return confirm('Do you want to delete this user?');"
+                                            href="../queries/delete_user_btn.php?delete=<?php echo $user_id; ?>"
+                                            class="btn btn-danger">Delete</a></td>
+                                <?php } ?>
                             </tr>
                             <?php
 

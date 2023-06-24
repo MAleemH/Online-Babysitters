@@ -1,4 +1,17 @@
 <?php include("../includes/connection.php"); ?>
+<?php ob_start(); ?>
+<?php session_start(); ?>
+<?php 
+
+  if (isset($_SESSION['user_role'])) {
+    if ($_SESSION['user_role'] !== 'Admin') {
+      header("Location: ../login.php");
+    }
+  } elseif (!isset($_SESSION['user_id'])) {
+    header("Location: ../login.php");
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

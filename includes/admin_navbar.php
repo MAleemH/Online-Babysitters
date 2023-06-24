@@ -25,6 +25,10 @@
 
         echo "<span class='dashboard'>Messages</span>";
 
+      } elseif ($current_page == 'subscribers.php') {
+
+        echo "<span class='dashboard'>Subscribers</span>";
+
       } elseif ($current_page == 'about_us.php') {
 
         echo "<span class='dashboard'>About Us</span>";
@@ -42,7 +46,7 @@
 
   </div>
   <div class="profile-details">
-    <img src="../images/user-icon.jpg" alt="Admin-Image">
-    <span class="admin_name">Muhammad Naseem</span>
+    <img src="../images/<?php echo $_SESSION['user_image']; ?>" alt="Admin-Image">
+    <span class="admin_name"><?php echo $_SESSION['user_name']; ?></span>
   </div>
 </nav>

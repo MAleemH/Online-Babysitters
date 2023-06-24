@@ -10,10 +10,13 @@
         $contact_number = $_POST['contact_number'];
         $emergency_contact_number = $_POST['emergency_contact_number'];
         $status = $_POST['status'];
+        $return_url = $_POST['return_url'];
 
         move_uploaded_file($image_tmp, "../images/$image");
 
-        $query = "INSERT INTO enrollments (name, photo, address, contact_number, emergency_contact_number, status) VALUES ('$name', '$image', '$address', '$contact_number', '$emergency_contact_number', '$status')";
+        $address = mysqli_real_escape_string($connection, $address);
+
+        $query = "INSERT INTO enrollments (name, photo, address, contact_number, emergency_contact_number, status) VALUES ('$name', '$image', '$address', '$contact_number', '$emergency_contact_number', 'Pending')";
 
         if (!$query) {
             die("Query Failed!");
@@ -22,7 +25,7 @@
         $result = mysqli_query($connection, $query);
 
         if ($result) {
-            header('Location: ../admin/add_enrollment.php');
+            header("Location: $return_url");
         } else {
             die("Query Connection Failed! " . mysqli_error($connection));
         }

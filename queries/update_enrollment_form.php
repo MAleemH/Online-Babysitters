@@ -21,6 +21,8 @@
             }
           }
 
+        $address = mysqli_real_escape_string($connection, $address);
+        
         $query = "UPDATE enrollments SET name='$name', photo='$image', address='$address', contact_number='$contact_number', emergency_contact_number='$emergency_contact_number', status='$status' WHERE enrollment_id='$enrollment_id'";
 
         if (!$query) {

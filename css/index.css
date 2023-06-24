@@ -3,6 +3,7 @@ a {
     color: rgb(135, 165, 245);
 }
 
+h5,
 a:hover {
     color: rgb(247, 108, 224);
 }
@@ -45,7 +46,6 @@ main {
 #home {
     height: 130vh;
     padding: 10px;
-    border-bottom-left-radius: 50px;
     background-image: url('../images/intro-bg.png');
     background-position: center;
     background-size: cover;
@@ -69,62 +69,94 @@ main {
 #services {
     height: 130vh;
     padding: 10px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background-image: url('../images/services-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/services-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.7;
 }
 
-.card {
-    height: 300px;
-    padding: 0;
-    margin: 0;
+.carousel-container {
+  position: relative;
 }
 
-.card-body {
-    overflow-y: auto;
+.carousel {
+  display: flex;
+  flex-direction: row;
+  scroll-snap-type: x mandatory;
+  overflow: hidden;
 }
 
-.MultiCarousel {
-    overflow: hidden;
-    padding: 15px;
-    width: 100%;
-    position: relative;
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: 300px;
+  height: 260px;
+  margin-right: 20px;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+  scroll-snap-align: center;
 }
 
-.MultiCarousel .MultiCarousel-inner {
-    transition: 1s ease all;
-    display: flex;
-    gap: 10px;
+.bCarousel-item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
 }
 
-.MultiCarousel .MultiCarousel-inner .item > div {
-    padding: 10px;
-    margin: 0;
+.service-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: white;
 }
 
-.MultiCarousel .leftLst,
-.MultiCarousel .rightLst {
-    position: absolute;
-    border-radius: 50%;
-    top: calc(50% - 20px);
+.service-description {
+  font-size: 14px;
+  margin-top: 5px;
+  overflow-wrap: break-word;
+  color: white;
+} 
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: gray;
+  font-size: 34px;
+  font-weight: bold;
+  border: 1px solid gray;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.MultiCarousel .leftLst {
-    left: 0;
+.carousel-button:hover {
+  transform: translateY(-50%) scale(1.1);
 }
 
-.MultiCarousel .rightLst {
-    right: 0;
+.prev-button,
+.prev-btn {
+  left: 10px;
 }
-    
-.MultiCarousel .leftLst.over,
-.MultiCarousel .rightLst.over {
-    pointer-events: none;
-    background:#ccc;
+
+.next-button,
+.next-btn {
+  right: 10px;
+}
+
+/* enrollment */
+
+#enrollment {
+  height: 130vh;
+  padding: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/services-bg-2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* about */
@@ -132,9 +164,7 @@ main {
 #about {
     height: 130vh;
     padding: 10px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background-image: url('../images/about-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,12 +175,10 @@ main {
 #contact {
     height: 130vh;
     padding: 10px;
-    background-image: url('../images/contact-bg.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/contact-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 50px;
 }
 
 .contact-info {
@@ -162,13 +190,12 @@ main {
 
 /* login */
 #login {
-    height: 70vh;
-    padding: 100px;
-    background-image: url('../images/login-bg.png');
+    height: 130vh;
+    padding: 10px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/login-bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-top-right-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

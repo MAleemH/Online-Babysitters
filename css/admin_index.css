@@ -257,6 +257,20 @@ nav .profile-details i{
   align-items: center;
 }
 
+/* toggle password */
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 /* Responsive Media Query */
 
 @media (max-width: 1240px) {

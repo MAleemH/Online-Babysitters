@@ -20,7 +20,9 @@
               $image = $row['photo'];
             }
           }
-
+        
+        $address = mysqli_real_escape_string($connection, $address);
+        
         $query = "UPDATE babysitters SET name='$name', photo='$image', address='$address', contact_number='$contact_number', emergency_contact_number='$emergency_contact_number', type='$type' WHERE babysitter_id='$babysitter_id'";
 
         if (!$query) {

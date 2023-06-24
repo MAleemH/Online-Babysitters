@@ -18,6 +18,8 @@
             }
           }
 
+        $description = mysqli_real_escape_string($connection, $description);
+
         $query = "UPDATE services SET name='$name', photo='$image', description='$description' WHERE service_id='$service_id'";
 
         if (!$query) {

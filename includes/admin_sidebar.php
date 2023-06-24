@@ -34,6 +34,12 @@
       </a>
     </li>
     <li>
+      <a href="subscribers.php">
+        <i class='bx bx-list-ul'></i>
+        <span class="links_name">Subscribers</span>
+      </a>
+    </li>
+    <li>
       <a href="about_us.php">
         <i class='bx bx-list-ul'></i>
         <span class="links_name">About Us</span>
@@ -52,7 +58,7 @@
       </a>
     </li>
     <li class="log_out">
-      <a href="#">
+      <a href="../queries/logout.php">
         <i class='bx bx-log-out'></i>
         <span class="links_name">Log out</span>
       </a>

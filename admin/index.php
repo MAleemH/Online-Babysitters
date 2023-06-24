@@ -25,7 +25,7 @@ require_once '../queries/dashboard_functions.php';
       <div class="box">
         <div class="right-side">
           <div class="box-topic">Total Subscribers</div>
-          <div class="number">38</div>
+          <div class="number"><?php echo getTotalSubscribers($connection); ?></div>
         </div>
         <i class='bx bxs-group cart two'></i>
       </div>

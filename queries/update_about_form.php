@@ -6,6 +6,8 @@
         $title = $_POST['title'];
         $description = $_POST['description'];
 
+        $description = mysqli_real_escape_string($connection, $description);
+
         $query = "UPDATE about SET title='$title', description='$description' WHERE id='$about_id'";
 
         if (!$query) {
